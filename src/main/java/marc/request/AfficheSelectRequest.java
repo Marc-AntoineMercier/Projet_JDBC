@@ -1,4 +1,4 @@
-package marc.model;
+package marc.request;
 
 
 import lombok.Data;
