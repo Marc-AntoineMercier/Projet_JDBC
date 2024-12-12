@@ -18,11 +18,13 @@ public abstract class MappingSelect<T>
     public MappingSelect(SelectRequest selectRequest) throws Exception {
         Type superClass = this.getClass().getGenericSuperclass();
         this._type = ((ParameterizedType)superClass).getActualTypeArguments()[0];
+
         setListOf(new ArrayList<>());
-        ResultSet rs = selectRequest.getResultSet();
+        ResultSet rs = selectRequest.getRs();
         while(rs.next()){
             getListOf().add(mapRowToClass(rs, (Class<T>) _type));
         }
+        selectRequest.closeAll();
     }
 
     private <T> T mapRowToClass(ResultSet resultSet, Class<T> clazz) throws Exception {

@@ -207,6 +207,7 @@ public class ServiceBd {
         return flag;
     }
 
+    /*
     private static <T> T mapRowToClass(ResultSet resultSet, Class<T> clazz) throws Exception {
         // usagage du principe de reflexion
         T instance = clazz.getDeclaredConstructor().newInstance();
@@ -274,4 +275,5 @@ public class ServiceBd {
         flag = true;
         return flag;
     }
+     */
 }

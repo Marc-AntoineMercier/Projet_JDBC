@@ -11,10 +11,10 @@ public abstract class AfficheSelectRequest {
     private String resultat;
 
     public AfficheSelectRequest(SelectRequest selectRequest) throws Exception {
-        if(selectRequest.getResultSet() != null && selectRequest.getResultSet().next()) {
-            selectRequest.getResultSet().first();
+        if(selectRequest.getRs() != null && selectRequest.getRs().next()) {
+            selectRequest.getRs().first();
             setResultat("");
-            ResultSet rs = selectRequest.getResultSet();
+            ResultSet rs = selectRequest.getRs();
             while(rs.next()) {
                 setResultat(getResultat() + "---------\n");
                 for(int i = 0; i < rs.getMetaData().getColumnCount(); i++) {
@@ -23,6 +23,8 @@ public abstract class AfficheSelectRequest {
                 setResultat(getResultat() + " | \n");
             }
         }
+
+        selectRequest.closeAll();
 
     }
 

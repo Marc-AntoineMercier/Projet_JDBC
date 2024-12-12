@@ -4,10 +4,7 @@ import lombok.Data;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
+import java.sql.*;
 import java.util.Properties;
 
 @Data
@@ -19,7 +16,9 @@ public abstract class RequestBd {
     private String query;
     private Connection conn;
     private Statement stmt;
-    private ResultSet resultSet;
+    private PreparedStatement pstmt;
+    private ResultSet rs;
+
 
     private static String PROPS_PATH = "./data/application.properties";
 
@@ -38,7 +37,6 @@ public abstract class RequestBd {
     };
 
     protected Connection initConnection() throws Exception{
-        Properties props = getProps();
         return DriverManager.getConnection(url, username, password);
     }
 
@@ -46,13 +44,39 @@ public abstract class RequestBd {
         return getConn().createStatement();
     }
 
-    protected ResultSet executeResultSet() throws Exception{
+    protected PreparedStatement initPrepareStatement() throws Exception{
+        return getConn().prepareStatement(getQuery());
+    }
+
+    protected ResultSet executePrepareStatement() throws Exception {
+        return getPstmt().executeQuery();
+    }
+
+    protected ResultSet executeStatement() throws Exception {
         return getStmt().executeQuery(getQuery());
     }
 
+    protected static void putParamInPrepareStatement(String[] param, PreparedStatement stmt) throws SQLException {
+        for(int i = 0; i < param.length; i++){
+            stmt.setString(i+1, param[i]);
+        }
+    }
+
+    protected static int getNbrParam(char[] temp) {
+        int nbr = 0;
+        for(char c: temp){
+            if(c == '?'){
+                nbr++;
+            }
+        }
+        return nbr;
+    }
+
     protected void closeAll() throws Exception{
-        if(getResultSet() != null) getResultSet().close();
+        if(getRs() != null) getRs().close();
         if(getStmt() != null) getStmt().close();
+        if(getPstmt() != null) getPstmt().close();
         if(getConn() != null) getConn().close();
     }
+
 }
