@@ -1,4 +1,4 @@
-package marc.request;
+package marc.actionBd;
 
 public abstract class SelectRequest extends RequestBd{
 

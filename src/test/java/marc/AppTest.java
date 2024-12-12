@@ -1,7 +1,7 @@
 package marc;
 
-import marc.request.AfficheSelectRequest;
-import marc.request.SelectRequest;
+import marc.actionBd.AfficheSelectRequest;
+import marc.actionBd.SelectRequest;
 import org.junit.jupiter.api.Test;
 
 /**
