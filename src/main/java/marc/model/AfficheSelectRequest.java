@@ -6,7 +6,7 @@ import lombok.Data;
 import java.sql.ResultSet;
 
 @Data
-public class AfficheSelectRequest {
+public abstract class AfficheSelectRequest {
 
     private String resultat;
 

@@ -1,6 +1,6 @@
 package marc.model;
 
-public class SelectRequest extends RequestBd{
+public abstract class SelectRequest extends RequestBd{
 
     public SelectRequest(String query) throws Exception {
         super(query);
