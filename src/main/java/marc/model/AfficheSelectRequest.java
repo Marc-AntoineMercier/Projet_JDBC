@@ -11,15 +11,19 @@ public class AfficheSelectRequest {
     private String resultat;
 
     public AfficheSelectRequest(SelectRequest selectRequest) throws Exception {
-        setResultat("");
-        ResultSet rs = selectRequest.getResultSet();
-        while(rs.next()) {
-            setResultat(getResultat() + "---------\n");
-            for(Integer i = 0; i < rs.getMetaData().getColumnCount(); i++) {
-                setResultat(getResultat() + " | " + rs.getObject(i + 1));
+        if(selectRequest.getResultSet() != null && selectRequest.getResultSet().next()) {
+            selectRequest.getResultSet().first();
+            setResultat("");
+            ResultSet rs = selectRequest.getResultSet();
+            while(rs.next()) {
+                setResultat(getResultat() + "---------\n");
+                for(int i = 0; i < rs.getMetaData().getColumnCount(); i++) {
+                    setResultat(getResultat() + " | " + rs.getObject(i + 1));
+                }
+                setResultat(getResultat() + " | \n");
             }
-            setResultat(getResultat() + " | \n");
         }
+
     }
 
     @Override
