@@ -1,10 +1,6 @@
 package marc.actionBd;
 
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.Statement;
-
-public class UpdateRequest extends RequestBd{
+public abstract class UpdateRequest extends RequestBd{
 
     private Integer countMod = -1;
 
@@ -14,8 +10,8 @@ public class UpdateRequest extends RequestBd{
             throw new Exception("query est vide");
         }
         else{
-            Connection con = initConnection();
-            Statement stmt = initStatement();
+            setConn(initConnection());
+            setStmt(initStatement());
             countMod = executeUpdateStatement();
 
             closeAll();
@@ -27,8 +23,8 @@ public class UpdateRequest extends RequestBd{
         if(query == null || query.isEmpty() || params == null || params.length == 0){
             throw new Exception("query est vide ou les parametre sont vides");
         }else{
-            Connection con = initConnection();
-            PreparedStatement pstmt = initPrepareStatement();
+            setConn(initConnection());
+            setPstmt(initPrepareStatement());
 
             int nbrParam = getNbrParam(getQuery().toCharArray());
 
