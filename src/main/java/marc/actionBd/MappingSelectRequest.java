@@ -10,26 +10,19 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-public abstract class MappingSelectRequest<T>
+public abstract class MappingSelect<T>
 {
     private List<T> listOf;
-    private T value;
     protected final Type _type;
 
-    public MappingSelectRequest(SelectRequest selectRequest) throws Exception {
+    public MappingSelect(SelectRequest selectRequest) throws Exception {
         Type superClass = this.getClass().getGenericSuperclass();
         this._type = ((ParameterizedType)superClass).getActualTypeArguments()[0];
 
         setListOf(new ArrayList<>());
         ResultSet rs = selectRequest.getRs();
         while(rs.next()){
-            if(rs.getMetaData().getColumnCount() > 1){
-                getListOf().add(mapRowToClass(rs, (Class<T>) _type));
-            }
-            else{
-                value = (T) convertValue(rs.getObject(1), (Class<?>) _type);
-            }
-
+            getListOf().add(mapRowToClass(rs, (Class<T>) _type));
         }
         selectRequest.closeAll();
     }

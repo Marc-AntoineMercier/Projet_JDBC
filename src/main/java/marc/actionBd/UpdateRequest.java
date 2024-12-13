@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.Statement;
 
-public abstract class UpdateRequest extends RequestBd{
+public class UpdateRequest extends RequestBd{
 
     private Integer countMod = -1;
 
