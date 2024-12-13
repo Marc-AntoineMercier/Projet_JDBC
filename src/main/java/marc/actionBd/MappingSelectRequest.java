@@ -24,7 +24,13 @@ public abstract class MappingSelectRequest<T>
         setListOf(new ArrayList<>());
         ResultSet rs = selectRequest.getRs();
         while(rs.next()){
-            getListOf().add(mapRowToClass(rs, (Class<T>) _type));
+            if(rs.getMetaData().getColumnCount() > 1){
+                getListOf().add(mapRowToClass(rs, (Class<T>) _type));
+            }
+            else{
+                value = (T) convertValue(rs.getObject(1), (Class<?>) _type);
+            }
+
         }
         selectRequest.closeAll();
     }
