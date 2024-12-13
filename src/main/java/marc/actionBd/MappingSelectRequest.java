@@ -10,12 +10,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
-public abstract class MappingSelect<T>
+public abstract class MappingSelectRequest<T>
 {
     private List<T> listOf;
+    private T value;
     protected final Type _type;
 
-    public MappingSelect(SelectRequest selectRequest) throws Exception {
+
+    public MappingSelectRequest(SelectRequest selectRequest) throws Exception {
         Type superClass = this.getClass().getGenericSuperclass();
         this._type = ((ParameterizedType)superClass).getActualTypeArguments()[0];
 
