@@ -13,6 +13,7 @@ import java.util.List;
 public abstract class MappingSelect<T>
 {
     private List<T> listOf;
+    private T value;
     protected final Type _type;
 
     public MappingSelect(SelectRequest selectRequest) throws Exception {
@@ -22,7 +23,12 @@ public abstract class MappingSelect<T>
         setListOf(new ArrayList<>());
         ResultSet rs = selectRequest.getRs();
         while(rs.next()){
-            getListOf().add(mapRowToClass(rs, (Class<T>) _type));
+            if(rs.getMetaData().getColumnCount() > 1){
+                getListOf().add(mapRowToClass(rs, (Class<T>) _type));
+            }
+            else{
+                value = (T) convertValue(rs.getObject(1), (Class<?>) _type);
+            }
         }
         selectRequest.closeAll();
     }
