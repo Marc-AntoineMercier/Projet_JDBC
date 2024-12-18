@@ -30,39 +30,39 @@ public abstract class RequestBd {
         setQuery(query);
     }
 
-    protected Properties getProps() throws Exception{
+    protected final Properties getProps() throws Exception{
         Properties props = new Properties();
         props.load(Files.newInputStream(Paths.get(PROPS_PATH)));
         return props;
     };
 
-    protected Connection initConnection() throws Exception{
+    protected final Connection initConnection() throws Exception{
         return DriverManager.getConnection(url, username, password);
     }
 
-    protected Statement initStatement() throws Exception{
+    protected final Statement initStatement() throws Exception{
         return getConn().createStatement();
     }
 
-    protected PreparedStatement initPrepareStatement() throws Exception{
+    protected final PreparedStatement initPrepareStatement() throws Exception{
         return getConn().prepareStatement(getQuery());
     }
 
-    protected ResultSet executePrepareStatement() throws Exception {
+    protected final ResultSet executePrepareStatement() throws Exception {
         return getPstmt().executeQuery();
     }
 
-    protected ResultSet executeStatement() throws Exception {
+    protected final ResultSet executeStatement() throws Exception {
         return getStmt().executeQuery(getQuery());
     }
 
-    protected static void putParamInPrepareStatement(String[] param, PreparedStatement stmt) throws SQLException {
+    protected final static void putParamInPrepareStatement(String[] param, PreparedStatement stmt) throws SQLException {
         for(int i = 0; i < param.length; i++){
             stmt.setString(i+1, param[i]);
         }
     }
 
-    protected static int getNbrParam(char[] temp) {
+    protected final static int getNbrParam(char[] temp) {
         int nbr = 0;
         for(char c: temp){
             if(c == '?'){
@@ -72,7 +72,7 @@ public abstract class RequestBd {
         return nbr;
     }
 
-    protected void closeAll() throws Exception{
+    protected final void closeAll() throws Exception{
         if(getRs() != null) getRs().close();
         if(getStmt() != null) getStmt().close();
         if(getPstmt() != null) getPstmt().close();
