@@ -9,7 +9,7 @@ les requetes JDBC sont répartie en deux type:
 
 Librairie Utiliser:
 ````xml
-    <!-- Modifier le pom pour mettre votre type de base de donnée (par défault mariadb est dedans -->
+    <!-- Modifier le pom pour mettre votre type de base de donnée (par défault mariadb est dedans) -->
 
     <!-- Pour ne pas faire les getter et setter-->
     <dependency>
