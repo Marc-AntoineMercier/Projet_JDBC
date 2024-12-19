@@ -25,3 +25,6 @@ permet d'afficher le retour de la base de donnée dans l'attribut a lui (resulta
 
 2. MappingSelectRequest
 permet de mapper un retour de la base de donné
+
+## Ajout futur:
+- Classe pour faire les type de requetes
