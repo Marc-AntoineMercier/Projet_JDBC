@@ -27,4 +27,4 @@ permet d'afficher le retour de la base de donnée dans l'attribut a lui (resulta
 permet de mapper un retour de la base de donné
 
 ## Ajout futur:
-- Classe pour faire les type de requetes
+- Creer des requetes a partir d'une interface
