@@ -1,8 +1,8 @@
 package marc.connectionDB.table;
 
-import tracky.mam.backend.connectionDB.generatedQuery.GeneratedTableQuery;
-import tracky.mam.backend.connectionDB.requestAction.SelectRequest;
-import tracky.mam.backend.connectionDB.requestAction.UpdateRequest;
+import marc.connectionDB.generatedQuery.GeneratedTableQuery;
+import marc.connectionDB.requestAction.SelectRequest;
+import marc.connectionDB.requestAction.UpdateRequest;
 
 public interface TableDB extends GeneratedTableQuery, UpdateRequest, SelectRequest
 {

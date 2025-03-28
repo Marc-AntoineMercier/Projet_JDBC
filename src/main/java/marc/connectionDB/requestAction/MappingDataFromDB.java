@@ -1,7 +1,7 @@
 package marc.connectionDB.requestAction;
 
 
-import tracky.mam.backend.connectionDB.table.TableDB;
+import marc.connectionDB.table.TableDB;
 
 import java.lang.reflect.Field;
 import java.sql.ResultSet;
