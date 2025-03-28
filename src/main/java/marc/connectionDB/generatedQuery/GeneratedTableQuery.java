@@ -1,9 +1,9 @@
 package marc.connectionDB.generatedQuery;
 
-import tracky.mam.backend.connectionDB.annotation.ManyToOne;
-import tracky.mam.backend.connectionDB.annotation.OneToOne;
-import tracky.mam.backend.connectionDB.annotation.Id;
-import tracky.mam.backend.connectionDB.dbInfo.DataInfo;
+import marc.connectionDB.annotation.ManyToOne;
+import marc.connectionDB.annotation.OneToOne;
+import marc.connectionDB.annotation.Id;
+import marc.connectionDB.dbInfo.DataInfo;
 
 import java.lang.reflect.Field;
 

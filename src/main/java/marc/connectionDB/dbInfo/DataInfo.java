@@ -8,8 +8,8 @@ import java.util.Properties;
 public interface DataInfo
 {
 
-    String PROPS_PATH = "src/main/resources/application.properties";
-    Map<String, String> dbInfo = Map.of( "url", "spring.datasource.url", "user", "spring.datasource.username", "password", "spring.datasource.password");
+    String PROPS_PATH = "./data/application.properties";
+    Map<String, String> dbInfo = Map.of( "url", "datasource.url", "user", "datasource.username", "password", "datasource.password");
 
     default Properties getDataInfo() throws Exception
     {
