@@ -1,7 +1,5 @@
 package marc.actionBd;
 
-import lombok.Data;
-
 import java.lang.reflect.Field;
 import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
@@ -9,7 +7,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
+
 public abstract class MappingSelectRequest<T>
 {
     private List<T> listOf;
@@ -80,4 +78,23 @@ public abstract class MappingSelectRequest<T>
 
     }
 
+    public List<T> getListOf() {
+        return listOf;
+    }
+
+    public void setListOf(List<T> listOf) {
+        this.listOf = listOf;
+    }
+
+    public Type get_type() {
+        return _type;
+    }
+
+    public T getValue() {
+        return value;
+    }
+
+    public void setValue(T value) {
+        this.value = value;
+    }
 }

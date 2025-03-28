@@ -7,7 +7,7 @@ import java.nio.file.Paths;
 import java.sql.*;
 import java.util.Properties;
 
-@Data
+
 public abstract class RequestBd {
 
     private String url;
@@ -79,4 +79,75 @@ public abstract class RequestBd {
         if(getConn() != null) getConn().close();
     }
 
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public static String getPropsPath() {
+        return PROPS_PATH;
+    }
+
+    public static void setPropsPath(String propsPath) {
+        PROPS_PATH = propsPath;
+    }
+
+    public ResultSet getRs() {
+        return rs;
+    }
+
+    public void setRs(ResultSet rs) {
+        this.rs = rs;
+    }
+
+    public PreparedStatement getPstmt() {
+        return pstmt;
+    }
+
+    public void setPstmt(PreparedStatement pstmt) {
+        this.pstmt = pstmt;
+    }
+
+    public Statement getStmt() {
+        return stmt;
+    }
+
+    public void setStmt(Statement stmt) {
+        this.stmt = stmt;
+    }
+
+    public Connection getConn() {
+        return conn;
+    }
+
+    public void setConn(Connection conn) {
+        this.conn = conn;
+    }
+
+    public String getQuery() {
+        return query;
+    }
+
+    public void setQuery(String query) {
+        this.query = query;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 }

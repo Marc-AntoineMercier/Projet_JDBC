@@ -1,6 +1,6 @@
 package marc.connectionDB.requestAction;
 
-import tracky.mam.backend.connectionDB.dbAction.*;
+import marc.connectionDB.dbAction.*;
 
 import java.sql.Connection;
 import java.sql.ResultSet;

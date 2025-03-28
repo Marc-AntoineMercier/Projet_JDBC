@@ -1,6 +1,6 @@
 package marc.connectionDB.dbAction;
 
-import tracky.mam.backend.connectionDB.dbInfo.DataInfo;
+import marc.connectionDB.dbInfo.DataInfo;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

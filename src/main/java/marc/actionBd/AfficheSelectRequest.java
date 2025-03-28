@@ -28,6 +28,14 @@ public abstract class AfficheSelectRequest {
 
     }
 
+    public String getResultat() {
+        return resultat;
+    }
+
+    public void setResultat(String resultat) {
+        this.resultat = resultat;
+    }
+
     @Override
     public String toString() {
         return resultat;
