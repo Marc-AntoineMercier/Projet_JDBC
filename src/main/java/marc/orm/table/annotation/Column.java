@@ -1,4 +1,4 @@
-package marc.func.table.annotation;
+package marc.orm.table.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

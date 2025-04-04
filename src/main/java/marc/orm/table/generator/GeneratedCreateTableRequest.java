@@ -1,13 +1,12 @@
-package marc.func.table.generator;
+package marc.orm.table.generator;
 
-import marc.func.table.annotation.Column;
-import marc.func.table.annotation.Id;
-import marc.func.table.annotation.TableName;
-import marc.func.table.annotation.relation.ManyToOne;
-import marc.func.table.annotation.relation.OneToOne;
+import marc.orm.table.annotation.Column;
+import marc.orm.table.annotation.Id;
+import marc.orm.table.annotation.TableName;
+import marc.orm.table.annotation.relation.ManyToOne;
+import marc.orm.table.annotation.relation.OneToOne;
 
 import java.lang.reflect.Field;
-import java.util.Arrays;
 import java.util.Objects;
 
 public class GeneratedCreateTableRequest

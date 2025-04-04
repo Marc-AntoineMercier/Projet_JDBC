@@ -1,4 +1,4 @@
-package marc.func.table.annotation.relation;
+package marc.orm.table.annotation.relation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,4 +7,4 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.FIELD)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface ManyToOne {}
+public @interface OneToOne {}

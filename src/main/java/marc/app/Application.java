@@ -1,14 +1,10 @@
 package marc.app;
 
-import marc.app.model.Test1;
-import marc.app.model.Test2;
-import marc.app.model.Test3;
-import marc.app.model.Test4;
-import marc.func.generatorSqlSchema.InitializeTableDb;
-import marc.func.ioc.IoCContainer;
-import marc.func.ioc.IoCScanner;
-import marc.func.request.UpdateRequest;
-import marc.func.table.generator.GeneratorTableRequest;
+import marc.orm.generatorSqlSchema.InitializeTableDb;
+import marc.orm.ioc.IoCContainer;
+import marc.orm.ioc.IoCScanner;
+import marc.orm.request.UpdateRequest;
+import marc.orm.table.generator.GeneratorTableRequest;
 
 public abstract class Application
 {

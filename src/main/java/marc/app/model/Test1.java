@@ -1,9 +1,9 @@
 package marc.app.model;
 
-import marc.func.table.annotation.Column;
-import marc.func.table.annotation.Id;
-import marc.func.table.annotation.Table;
-import marc.func.table.annotation.TableName;
+import marc.orm.table.annotation.Column;
+import marc.orm.table.annotation.Id;
+import marc.orm.table.annotation.Table;
+import marc.orm.table.annotation.TableName;
 
 @Table
 @TableName(name = "sleep")

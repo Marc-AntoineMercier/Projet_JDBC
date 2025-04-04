@@ -1,4 +1,4 @@
-package marc.func.table.generator;
+package marc.orm.table.generator;
 
 import static marc.app.Application.container;
 

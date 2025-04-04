@@ -2,15 +2,11 @@ package marc.app.model;
 
 import marc.orm.table.annotation.Id;
 import marc.orm.table.annotation.Table;
-import marc.orm.table.annotation.relation.OneToOne;
 
 @Table
-public class Test4
+public class Dodo1
 {
-
     @Id
     private Integer id;
 
-    @OneToOne
-    private Test3 test3;
 }

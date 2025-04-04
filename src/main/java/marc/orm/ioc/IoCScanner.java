@@ -1,4 +1,4 @@
-package marc.func.ioc;
+package marc.orm.ioc;
 
 import java.io.File;
 import java.lang.reflect.Constructor;

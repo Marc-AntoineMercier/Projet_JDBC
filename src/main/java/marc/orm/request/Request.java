@@ -1,7 +1,7 @@
-package marc.func.request;
+package marc.orm.request;
 
 import lombok.Data;
-import marc.func.database.DataBaseConfig;
+import marc.orm.database.DataBaseConfig;
 
 import java.sql.*;
 

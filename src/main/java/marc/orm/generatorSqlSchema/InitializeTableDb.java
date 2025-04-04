@@ -1,10 +1,10 @@
-package marc.func.generatorSqlSchema;
+package marc.orm.generatorSqlSchema;
 
-import marc.func.request.UpdateRequest;
-import marc.func.table.annotation.Table;
-import marc.func.table.annotation.relation.ManyToOne;
-import marc.func.table.annotation.relation.OneToOne;
-import marc.func.table.generator.GeneratorTableRequest;
+import marc.orm.request.UpdateRequest;
+import marc.orm.table.annotation.Table;
+import marc.orm.table.annotation.relation.ManyToOne;
+import marc.orm.table.annotation.relation.OneToOne;
+import marc.orm.table.generator.GeneratorTableRequest;
 
 import java.lang.reflect.Field;
 import java.util.*;
@@ -37,15 +37,41 @@ public class InitializeTableDb
 
     public void initializeTablesAutomatically(String path) throws Exception {
         Map<Class<?>, Integer> listPriority = setPriority(path);
+        Map<Class<?>, Integer> temp = listPriority;
+
+        while (!temp.isEmpty()) {
+            Class<?> lowestPriority = getClassWithLowestPriority(listPriority);
+
+            updateRequest.executeStatement(generatorTableRequest.generatedDropTableRequest(lowestPriority));
+
+            temp.remove(lowestPriority);
+        }
 
         while (!listPriority.isEmpty()) {
             Class<?> highestPriorityClass = getClassWithHighestPriority(listPriority);
 
-            updateRequest.executeStatement(generatorTableRequest.generatedDropTableRequest(highestPriorityClass));
             updateRequest.executeStatement(generatorTableRequest.generatedCreateTableRequest(highestPriorityClass));
 
             listPriority.remove(highestPriorityClass);
         }
+    }
+
+    private Class<?> getClassWithLowestPriority(Map<Class<?>, Integer> tableCreated) {
+        if (tableCreated == null || tableCreated.isEmpty()) {
+            return null;
+        }
+
+        Class<?> classWithHighestPriority = null;
+        int highestPriority = Integer.MAX_VALUE;
+
+        for (Map.Entry<Class<?>, Integer> entry : tableCreated.entrySet()) {
+            if (entry.getValue() < highestPriority) {
+                highestPriority = entry.getValue();
+                classWithHighestPriority = entry.getKey();
+            }
+        }
+
+        return classWithHighestPriority;
     }
 
     private Class<?> getClassWithHighestPriority(Map<Class<?>, Integer> tableCreated) {
