@@ -18,7 +18,4 @@ public class Test1
     private String fname;
     private String lname;
 
-    @OneToOne
-    private Test3 test3;
-
 }

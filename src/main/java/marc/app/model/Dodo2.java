@@ -14,6 +14,4 @@ public class Dodo2
     @ManyToOne
     private Dodo1 dodo1;
 
-    @OneToOne
-    private Test1 test1;
 }

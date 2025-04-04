@@ -6,32 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="63f005e1-4f5e-441c-82bf-fae362c90fee" name="Changes" comment="fix package bug">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/app/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/app/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/app/model/Dodo1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/app/model/Dodo1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/app/model/Dodo2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/app/model/Dodo2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/app/model/Test1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/app/model/Test1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/app/model/Test2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/app/model/Test2.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/app/model/Test3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/app/model/Test3.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/app/model/Test4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/app/model/Test4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/orm/database/DataBaseConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/func/orm/database/DataBaseConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/orm/generatorSqlSchema/InitializeTableDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/func/orm/generatorSqlSchema/InitializeTableDb.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/orm/generatorSqlSchema/ScannerTableBd.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/func/orm/generatorSqlSchema/ScannerTableBd.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/orm/ioc/IoCContainer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/func/ioc/IoCContainer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/orm/ioc/IoCScanner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/func/ioc/IoCScanner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/orm/request/Request.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/func/orm/request/Request.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/orm/request/SelectRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/func/orm/request/SelectRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/orm/request/UpdateRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/func/orm/request/UpdateRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/orm/request/annotation/Query.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/func/orm/request/annotation/Query.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/orm/table/CreateTable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/func/orm/table/CreateTable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/orm/table/annotation/Column.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/func/orm/table/annotation/Column.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/orm/table/annotation/Id.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/func/orm/table/annotation/Id.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/orm/table/annotation/Table.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/func/orm/table/annotation/Table.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/orm/table/annotation/TableName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/func/orm/table/annotation/TableName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/orm/table/annotation/relation/ManyToOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/func/orm/table/annotation/relation/ManyToOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/orm/table/annotation/relation/OneToOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/func/orm/table/annotation/relation/OneToOne.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/orm/table/generator/GeneratedCreateTableRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/func/orm/table/generator/GeneratedCreateTableRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/orm/table/generator/GeneratedDropRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/func/orm/table/generator/GeneratedDropRequest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/marc/orm/table/generator/GeneratorTableRequest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/func/orm/table/generator/GeneratorTableRequest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/marc/func/orm/generatorSqlSchema/InitializeTableDb.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/marc/func/orm/generatorSqlSchema/InitializeTableDb.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -156,7 +131,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1743124117615</updated>
-      <workItem from="1743769331614" duration="3164000" />
+      <workItem from="1743769331614" duration="4539000" />
     </task>
     <task id="LOCAL-00001" summary="Add interface code">
       <option name="closed" value="true" />

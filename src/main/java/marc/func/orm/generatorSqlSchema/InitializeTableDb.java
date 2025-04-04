@@ -7,6 +7,7 @@ import marc.func.orm.table.annotation.relation.OneToOne;
 import marc.func.orm.table.generator.GeneratorTableRequest;
 
 import java.lang.reflect.Field;
+import java.security.Key;
 import java.util.*;
 
 import static marc.app.Application.container;
@@ -120,10 +121,8 @@ public class InitializeTableDb
         List<Class<?>> entityClasses = tableBd.scanPackage(packageName);
         Map<Class<?>, Node> classNodes = new HashMap<>();
 
-        for (Class<?> entityClass : entityClasses)
-        {
-            if (entityClass.isAnnotationPresent(Table.class))
-            {
+        for (Class<?> entityClass : entityClasses) {
+            if (entityClass.isAnnotationPresent(Table.class)) {
                 Node node = new Node(entityClass.getName());
                 classNodes.put(entityClass, node);
             }
