@@ -25,7 +25,6 @@ public class InitializeTableDb
         this.tableBd = container.resolve(ScannerTableBd.class);
     }
 
-    // Représente une classe dans le graph
     static class Node {
         String className;
         List<Node> dependencies;

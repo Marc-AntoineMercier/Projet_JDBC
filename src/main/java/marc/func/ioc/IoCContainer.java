@@ -20,7 +20,8 @@ public class IoCContainer
 
         try {
             Constructor<?>[] constructors = type.getConstructors();
-            if (constructors.length > 0) {
+            if (constructors.length > 0)
+            {
                 Constructor<?> constructor = constructors[0];
                 Class<?>[] parameterTypes = constructor.getParameterTypes();
                 Object[] parameters = new Object[parameterTypes.length];
