@@ -152,7 +152,6 @@ public class InitializeTableDb
             tableCreated.put(Class.forName(node.className), priority++);
         }
 
-
         return tableCreated;
     }
 
