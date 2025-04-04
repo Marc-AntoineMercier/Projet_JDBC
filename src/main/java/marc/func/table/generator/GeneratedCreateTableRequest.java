@@ -44,8 +44,7 @@ public class GeneratedCreateTableRequest
                         )
                     .append("(")
                     .append(getForeightKey(field))
-                    .append(") ")
-                        .append(" ON DELETE SET NULL");
+                    .append(")");
 
             }
 

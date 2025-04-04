@@ -39,16 +39,12 @@ public class InitializeTableDb
     public void initializeTablesAutomatically(String path) throws Exception {
         Map<Class<?>, Integer> listPriority = setPriority(path);
 
-
-        while (!listPriority.isEmpty()) {
+        for (Class<?> type : listPriority.keySet()) {
             Class<?> highestPriority = getClassWithHighestPriority(listPriority);
-            System.out.println(highestPriority);
 
             updateRequest.executeStatement(generatorTableRequest.generatedDropTableRequest(highestPriority));
             updateRequest.executeStatement(generatorTableRequest.generatedCreateTableRequest(highestPriority));
 
-
-            listPriority.remove(highestPriority);
         }
     }
 
