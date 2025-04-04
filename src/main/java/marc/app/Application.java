@@ -25,18 +25,5 @@ public abstract class Application
         UpdateRequest updateRequest = container.resolve(UpdateRequest.class);
         GeneratorTableRequest generatorTableRequest = container.resolve(GeneratorTableRequest.class);
 
-//        updateRequest.executeStatement(generatorTableRequest.generatedDropTableRequest(Test4.class));
-//        updateRequest.executeStatement(generatorTableRequest.generatedDropTableRequest(Test3.class));
-//        updateRequest.executeStatement(generatorTableRequest.generatedDropTableRequest(Test2.class));
-//        updateRequest.executeStatement(generatorTableRequest.generatedDropTableRequest(Test1.class));
-//        updateRequest.executeStatement(generatorTableRequest.generatedCreateTableRequest(Test1.class));
-//        updateRequest.executeStatement(generatorTableRequest.generatedCreateTableRequest(Test2.class));
-//        updateRequest.executeStatement(generatorTableRequest.generatedCreateTableRequest(Test3.class));
-//        updateRequest.executeStatement(generatorTableRequest.generatedCreateTableRequest(Test4.class));
-//        updateRequest.executeStatement(generatorTableRequest.generatedDropTableRequest(Test4.class));
-//        updateRequest.executeStatement(generatorTableRequest.generatedDropTableRequest(Test3.class));
-//        updateRequest.executeStatement(generatorTableRequest.generatedDropTableRequest(Test2.class));
-//        updateRequest.executeStatement(generatorTableRequest.generatedDropTableRequest(Test1.class));
-
     }
 }
