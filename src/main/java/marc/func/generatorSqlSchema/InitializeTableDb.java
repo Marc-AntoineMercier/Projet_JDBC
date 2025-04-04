@@ -47,6 +47,7 @@ public class InitializeTableDb
             Class<?> highestPriority = getClassWithHighestPriority(listPriority);
 
             updateRequest.executeStatement(generatorTableRequest.generatedDropTableRequest(highestPriority));
+            System.out.println(generatorTableRequest.generatedCreateTableRequest(highestPriority));
             updateRequest.executeStatement(generatorTableRequest.generatedCreateTableRequest(highestPriority));
 
             iterator.remove();

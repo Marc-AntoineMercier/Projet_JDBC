@@ -16,8 +16,6 @@ public class Test1
     @Column(name = "first_name", value = 10, defaultValue = "MARC", nullable = true)
     private String fname;
     private String lname;
-//
-//    @OneToOne
-//    private Test2 test2;
+
 
 }

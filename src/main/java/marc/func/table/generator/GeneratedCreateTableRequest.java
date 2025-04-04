@@ -7,6 +7,7 @@ import marc.func.table.annotation.relation.ManyToOne;
 import marc.func.table.annotation.relation.OneToOne;
 
 import java.lang.reflect.Field;
+import java.util.Arrays;
 import java.util.Objects;
 
 public class GeneratedCreateTableRequest
@@ -36,10 +37,15 @@ public class GeneratedCreateTableRequest
                 query.append(", FOREIGN KEY (")
                     .append(field.getName())
                     .append(") REFERENCES ")
-                    .append(field.getType().getSimpleName())
+                        .append(
+                                field.getType().isAnnotationPresent(TableName.class)?
+                                        field.getType().getAnnotation(TableName.class).name():
+                                        field.getType().getSimpleName()
+                        )
                     .append("(")
                     .append(getForeightKey(field))
-                    .append(") ");
+                    .append(") ")
+                        .append(" ON DELETE CASCADE");
 
             }
 
