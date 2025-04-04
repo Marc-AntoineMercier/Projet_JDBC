@@ -1,4 +1,4 @@
-package marc.orm.request.annotation;
+package marc.func.orm.request.annotation;
 
 
 import java.lang.annotation.ElementType;

@@ -1,10 +1,10 @@
-package marc.orm.table.generator;
+package marc.func.orm.table.generator;
 
-import marc.orm.table.annotation.Column;
-import marc.orm.table.annotation.Id;
-import marc.orm.table.annotation.TableName;
-import marc.orm.table.annotation.relation.ManyToOne;
-import marc.orm.table.annotation.relation.OneToOne;
+import marc.func.orm.table.annotation.Column;
+import marc.func.orm.table.annotation.Id;
+import marc.func.orm.table.annotation.TableName;
+import marc.func.orm.table.annotation.relation.ManyToOne;
+import marc.func.orm.table.annotation.relation.OneToOne;
 
 import java.lang.reflect.Field;
 import java.util.Objects;

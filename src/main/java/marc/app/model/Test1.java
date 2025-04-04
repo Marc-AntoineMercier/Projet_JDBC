@@ -1,9 +1,10 @@
 package marc.app.model;
 
-import marc.orm.table.annotation.Column;
-import marc.orm.table.annotation.Id;
-import marc.orm.table.annotation.Table;
-import marc.orm.table.annotation.TableName;
+import marc.func.orm.table.annotation.Column;
+import marc.func.orm.table.annotation.Id;
+import marc.func.orm.table.annotation.Table;
+import marc.func.orm.table.annotation.TableName;
+import marc.func.orm.table.annotation.relation.OneToOne;
 
 @Table
 @TableName(name = "sleep")
@@ -17,5 +18,7 @@ public class Test1
     private String fname;
     private String lname;
 
+    @OneToOne
+    private Test3 test3;
 
 }

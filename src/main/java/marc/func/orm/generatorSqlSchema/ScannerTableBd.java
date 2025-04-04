@@ -1,4 +1,4 @@
-package marc.orm.generatorSqlSchema;
+package marc.func.orm.generatorSqlSchema;
 
 import java.io.File;
 import java.net.URL;

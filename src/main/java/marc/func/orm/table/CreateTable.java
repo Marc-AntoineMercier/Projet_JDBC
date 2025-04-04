@@ -1,7 +1,7 @@
-package marc.orm.table;
+package marc.func.orm.table;
 
-import marc.orm.request.UpdateRequest;
-import marc.orm.table.generator.GeneratorTableRequest;
+import marc.func.orm.request.UpdateRequest;
+import marc.func.orm.table.generator.GeneratorTableRequest;
 
 import static marc.app.Application.container;
 

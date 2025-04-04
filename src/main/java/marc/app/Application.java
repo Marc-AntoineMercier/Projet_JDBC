@@ -1,10 +1,10 @@
 package marc.app;
 
-import marc.orm.generatorSqlSchema.InitializeTableDb;
-import marc.orm.ioc.IoCContainer;
-import marc.orm.ioc.IoCScanner;
-import marc.orm.request.UpdateRequest;
-import marc.orm.table.generator.GeneratorTableRequest;
+import marc.func.orm.generatorSqlSchema.InitializeTableDb;
+import marc.func.ioc.IoCContainer;
+import marc.func.ioc.IoCScanner;
+import marc.func.orm.request.UpdateRequest;
+import marc.func.orm.table.generator.GeneratorTableRequest;
 
 public abstract class Application
 {
@@ -16,10 +16,9 @@ public abstract class Application
     public static void run() throws Exception {
         IoCScanner.scanAndRegister(scanIoC, container);
 
-        InitializeTableDb initializer = container.resolve(InitializeTableDb.class);
-        initializer.initializeTablesAutomatically(scanTable);
-        UpdateRequest updateRequest = container.resolve(UpdateRequest.class);
-        GeneratorTableRequest generatorTableRequest = container.resolve(GeneratorTableRequest.class);
+        container
+                .resolve(InitializeTableDb.class)
+                .initializeTablesAutomatically(scanTable);
 
     }
 }

@@ -1,4 +1,4 @@
-package marc.orm.ioc;
+package marc.func.ioc;
 
 import java.lang.reflect.Constructor;
 import java.util.HashMap;

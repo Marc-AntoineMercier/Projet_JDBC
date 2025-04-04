@@ -1,8 +1,9 @@
 package marc.app.model;
 
-import marc.orm.table.annotation.Id;
-import marc.orm.table.annotation.Table;
-import marc.orm.table.annotation.relation.ManyToOne;
+import marc.func.orm.table.annotation.Id;
+import marc.func.orm.table.annotation.Table;
+import marc.func.orm.table.annotation.relation.ManyToOne;
+import marc.func.orm.table.annotation.relation.OneToOne;
 
 @Table
 public class Dodo2
@@ -13,5 +14,6 @@ public class Dodo2
     @ManyToOne
     private Dodo1 dodo1;
 
-
+    @OneToOne
+    private Test1 test1;
 }
