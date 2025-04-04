@@ -39,18 +39,16 @@ public class InitializeTableDb
     public void initializeTablesAutomatically(String path) throws Exception {
         Map<Class<?>, Integer> listPriority = setPriority(path);
 
-        Iterator<Class<?>> iterator = listPriority.keySet().iterator();
 
-        while (iterator.hasNext()) {
-            Class<?> type = iterator.next();
-
+        while (!listPriority.isEmpty()) {
             Class<?> highestPriority = getClassWithHighestPriority(listPriority);
+            System.out.println(highestPriority);
 
             updateRequest.executeStatement(generatorTableRequest.generatedDropTableRequest(highestPriority));
-            System.out.println(generatorTableRequest.generatedCreateTableRequest(highestPriority));
             updateRequest.executeStatement(generatorTableRequest.generatedCreateTableRequest(highestPriority));
 
-            iterator.remove();
+
+            listPriority.remove(highestPriority);
         }
     }
 
