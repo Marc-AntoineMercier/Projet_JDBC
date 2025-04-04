@@ -1,8 +1,8 @@
 package marc.app;
 
-import marc.framework.generatorSqlSchema.InitializeTableDb;
-import marc.framework.ioc.IoCContainer;
-import marc.framework.ioc.IoCScanner;
+import marc.func.generatorSqlSchema.InitializeTableDb;
+import marc.func.ioc.IoCContainer;
+import marc.func.ioc.IoCScanner;
 
 public abstract class Application
 {

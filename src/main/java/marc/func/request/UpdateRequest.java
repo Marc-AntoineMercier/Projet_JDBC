@@ -1,4 +1,4 @@
-package marc.framework.request;
+package marc.func.request;
 
 import java.sql.Connection;
 import java.sql.Statement;

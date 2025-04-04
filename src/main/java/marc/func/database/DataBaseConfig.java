@@ -1,4 +1,4 @@
-package marc.framework.database;
+package marc.func.database;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;

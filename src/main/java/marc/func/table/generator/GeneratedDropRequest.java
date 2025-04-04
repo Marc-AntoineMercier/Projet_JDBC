@@ -1,6 +1,6 @@
-package marc.framework.table.generator;
+package marc.func.table.generator;
 
-import marc.framework.table.annotation.TableName;
+import marc.func.table.annotation.TableName;
 
 public class GeneratedDropRequest
 {

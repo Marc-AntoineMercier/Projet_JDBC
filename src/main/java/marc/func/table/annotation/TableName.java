@@ -1,5 +1,4 @@
-package marc.framework.table.annotation;
-
+package marc.func.table.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -8,4 +7,7 @@ import java.lang.annotation.Target;
 
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)
-public @interface Table {}
+public @interface TableName
+{
+    String name() default "";
+}

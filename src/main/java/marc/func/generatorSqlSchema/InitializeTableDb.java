@@ -1,10 +1,10 @@
-package marc.framework.generatorSqlSchema;
+package marc.func.generatorSqlSchema;
 
-import marc.framework.request.UpdateRequest;
-import marc.framework.table.annotation.Table;
-import marc.framework.table.annotation.relation.ManyToOne;
-import marc.framework.table.annotation.relation.OneToOne;
-import marc.framework.table.generator.GeneratorTableRequest;
+import marc.func.request.UpdateRequest;
+import marc.func.table.annotation.Table;
+import marc.func.table.annotation.relation.ManyToOne;
+import marc.func.table.annotation.relation.OneToOne;
+import marc.func.table.generator.GeneratorTableRequest;
 
 import java.lang.reflect.Field;
 import java.util.*;
